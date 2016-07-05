@@ -60,7 +60,7 @@ class MemoryHardPasswordHash
             if ($subLength < 64) {
                 $subString .= substr($buffer, 0, 64 - $subLength);
             }
-            echo "Used offset: ".$offset."\n";
+            //echo "Used offset: ".$offset."\n";
             /*
              * We append the newly created hash to the end of our buffer
              */
