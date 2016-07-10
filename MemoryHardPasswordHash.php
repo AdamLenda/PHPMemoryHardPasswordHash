@@ -5,7 +5,8 @@ class MemoryHardPasswordHash
     /**
      * This function uses hash functions and the salt and password as seeds to create a hex string that is 1MB in
      * length. It then uses values from that string to return a 'hashed password' that cannot be cracked using Password
-     * Rainbow Tables or GPU hash guessing functions.
+     * Rainbow Tables or GPU hash guessing functions. Uses of this function have averaged less than 1 second in testing
+     * so far.
      * @param $salt
      * @param $password
      * @param $hashLength
