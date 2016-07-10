@@ -39,8 +39,9 @@ class MemoryHardPasswordHash
             $offset = hexdec(substr($buffer, $bufferLength-6))%$bufferLength;
             /*
              * We use the offset we just calculated to jump to that position in the buffer and read out the next 6 hex
-             * characters. If we run out characters before hitting the end of the buffer, we wrap around and read the
-             * remaining characters from the start of the buffer. Then we convert that 6 place hex string an integer.
+             * characters. If we run out characters in the buffer before getting the number we need, we wrap around
+             * and read the remaining characters from the start of the buffer. Then we convert that 6 place hex string
+             * an integer.
              */
             $multiplier = substr($buffer, $offset, 6);
             $multiplierLength = strlen($multiplier);
